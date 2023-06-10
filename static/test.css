@@ -1,0 +1,12 @@
+.imgContainer{
+    background-image: url(https://static.igem.wiki/teams/4713/wiki/logo.jpg);
+    background-size: 30%;
+    display: block;
+    background-position-y: center;
+    background-position-x: center;
+    background-repeat: no-repeat;
+
+
+    /* it is optional, for making this div centered in parent*/
+    margin: 0 auto;
+}
