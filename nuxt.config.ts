@@ -7,7 +7,4 @@ export default defineNuxtConfig({
       fields: ["cover"],
     },
   },
-  app: {
-    baseURL: "/peking/",
-  },
 })
