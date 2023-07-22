@@ -7,4 +7,7 @@ export default defineNuxtConfig({
       fields: ["cover"],
     },
   },
+  app: {
+    baseURL: "/A-website-script/",
+  },
 })
