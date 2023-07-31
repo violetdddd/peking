@@ -8,6 +8,6 @@ export default defineNuxtConfig({
     },
   },
   app: {
-    baseURL: "/peking/",
+    baseURL: "/A-website-script/",
   },
 })
