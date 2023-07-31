@@ -5,7 +5,7 @@
     <div :class="{ 'transition-opacity ease-in-out duration-300 opacity-0 -z-10': !inSide, 'animate-fade': inSide }"
       class=" flex justify-center -space-x-10 text-white text-3xl font-bold">
       <div
-        class="transition ease-in-out delay-150 duration-1000 hover:scale-125 hover:z-[70] w-[50vh] h-[50vh] scale-110 rounded-full flex items-center justify-center bg-pink-500 shadow-lg ring-2 ring-white z-[50] dark:ring-slate-900">
+        class="transition ease-in-out delay-150 duration-1000 hover:scale-125 hover:z-[70] w-[calc(min(50vh,50vw))] h-[calc(min(50vh,50vw))] scale-110 rounded-full flex items-center justify-center bg-pink-500 shadow-lg ring-2 ring-white z-[50] dark:ring-slate-900">
         <div class=" uppercase pl-5">
           <ol id="mainList" class="">
             <li  @mouseover="addActive(0)" :class="{'active':mainListActive[0]}">
@@ -29,7 +29,7 @@
         </div>
       </div>
       <div
-        class="transition ease-in-out delay-150 duration-1000 hover:scale-110 hover:z-[70] w-[50vh] h-[50vh] rounded-full flex items-center justify-center bg-pink-500 shadow-lg ring-2 ring-white z-[60] dark:ring-slate-900">
+        class="transition ease-in-out delay-150 duration-1000 hover:scale-110 hover:z-[70] w-[calc(min(50vh,50vw))] h-[calc(min(50vh,50vw))] rounded-full flex items-center justify-center bg-pink-500 shadow-lg ring-2 ring-white z-[60] dark:ring-slate-900">
         <div class="uppercase pl-5">
           <ol id="subList" :class="{'hidden':!mainListActive[0]}">
             <li @click="hideBack">
