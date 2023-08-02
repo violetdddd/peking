@@ -7,6 +7,7 @@
         <Title>A simple wiki</Title>
         <Header />
         <slot />
+        <Footer/>
     </div>
 </template>
 

@@ -1,6 +1,6 @@
 <template>
 <div
-  class="z-50 fixed left-4 top-24 h-[calc(100vh-7rem)] bg-white bg-opacity-70 backdrop-blur-sm border rounded-lg transition-all ease-out flex flex-row"
+  class="z-[45] fixed left-4 top-24 h-[calc(100vh-7rem)] bg-white bg-opacity-70 backdrop-blur-sm border rounded-lg transition-all ease-out flex flex-row"
   :class="{ 'w-12': !expand, 'w-1/4': expand }"
 >
   <div
