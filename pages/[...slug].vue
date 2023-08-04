@@ -1,10 +1,12 @@
 <template>
-  <div>
-    <AppSideBar />
+  <div class="flex items-start justify-evenly relative ">
+    <!-- <AppSideBar /> -->
+    <Sider />
     <div
-      class="m-auto my-8 flex-grow max-w-2xl px-4 py-10 bg-white sm:px-8 sm:shadow ring-1 ring-gray-200 sm:rounded-lg"
+      class=" my-8 flex-grow max-w-2xl px-4 py-10 bg-white sm:px-8 sm:shadow ring-1 ring-gray-200 sm:rounded-lg"
     >
       <main class="max-w-none">
+        
         <ContentDoc>
           <template #empty>
             <h1>Oops, nothing here yet</h1>
