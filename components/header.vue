@@ -1,13 +1,13 @@
 <template>
   <div @click.self="hideBack"
-    :class="{ 'bg-black/[0.85]': inSide, 'z-50': zIndex, 'bg-transparent': !inSide,'-z-10':!zIndex }"
+    :class="{ 'bg-black/[0.85]': inSide, 'z-50': zIndex, 'bg-transparent': !inSide,'-z-10 hidden':!zIndex }"
     class="flex items-center justify-center flex-col transition fixed w-[100vw] h-[100vh]">
     <div :class="{ 'transition-opacity ease-in-out duration-300 opacity-0 -z-10': !inSide, 'animate-fade': inSide }"
       class=" flex justify-center -space-x-10 text-white text-3xl font-bold">
       <div
         class="transition ease-in-out delay-150 duration-1000 hover:scale-125 hover:z-[70] w-[calc(min(50vh,50vw))] h-[calc(min(50vh,50vw))] scale-110 rounded-full flex items-center justify-center bg-pink-500 shadow-lg ring-2 ring-white z-[50] dark:ring-slate-900">
         <div class=" uppercase pl-5">
-          <ol id="mainList" class="">
+          <ul id="mainList" class="">
             <li  @mouseover="addActive(0)" :class="{'active':mainListActive[0]}">
               <h1>project</h1>
             </li>
@@ -25,13 +25,13 @@
             <li @mouseover="addActive(4)" :class="{'active':mainListActive[4]}">
               <h1>team</h1>
             </li>
-          </ol>
+          </ul>
         </div>
       </div>
       <div
         class="transition ease-in-out delay-150 duration-1000 hover:scale-110 hover:z-[70] w-[calc(min(50vh,50vw))] h-[calc(min(50vh,50vw))] rounded-full flex items-center justify-center bg-pink-500 shadow-lg ring-2 ring-white z-[60] dark:ring-slate-900">
         <div class="uppercase pl-5">
-          <ol id="subList" :class="{'hidden':!mainListActive[0]}">
+          <ul id="subList" :class="{'hidden':!mainListActive[0]}">
             <li @click="hideBack">
               <h1><NuxtLink to="/about">description</NuxtLink></h1>
             </li>
@@ -41,8 +41,8 @@
             <li @click="hideBack">
               <h1>contribution</h1>
             </li>
-          </ol>
-          <ol id="subList" :class="{'hidden':!mainListActive[1]}">
+          </ul>
+          <ul id="subList" :class="{'hidden':!mainListActive[1]}">
             <li @click="hideBack">
               <h1>design</h1>
             </li>
@@ -61,8 +61,8 @@
             <li @click="hideBack">
               <h1>safety</h1>
             </li>
-          </ol>
-          <ol id="subList" :class="{'hidden':!mainListActive[2]}">
+          </ul>
+          <ul id="subList" :class="{'hidden':!mainListActive[2]}">
             <li @click="hideBack">
               <h1>model</h1>
             </li>
@@ -75,16 +75,16 @@
             <li @click="hideBack">
               <h1>measurement</h1>
             </li>
-          </ol>
-          <ol id="subList" :class="{'hidden':!mainListActive[3]}">
+          </ul>
+          <ul id="subList" :class="{'hidden':!mainListActive[3]}">
             <li @click="hideBack">
               <h1>integrated<br>human practices</h1>
             </li>
             <li  @click="hideBack">
               <h1>education & <br>public engagement</h1>
             </li>
-          </ol>
-          <ol id="subList" :class="{'hidden':!mainListActive[4]}">
+          </ul>
+          <ul id="subList" :class="{'hidden':!mainListActive[4]}">
             <li @click="hideBack">
               <h1 >members</h1>
             </li>
@@ -94,7 +94,7 @@
             <li @click="hideBack">
               <h1>attributions</h1>
             </li>
-          </ol>
+          </ul>
         </div>
       </div>
 
@@ -213,7 +213,7 @@ function addActive(n:number) {
   transition: 0.3s;
   box-shadow: inset 0 -0.1em 0 -1px #db2777;
 }
-ol#subList {
+ul#subList {
   width: fit-content;
   text-align: center;
   text-align: -webkit-center;

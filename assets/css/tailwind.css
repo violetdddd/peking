@@ -37,4 +37,7 @@
     p {
       @apply leading-8;
     }
+    ol {
+      @apply list-decimal list-inside
+    }
   }
