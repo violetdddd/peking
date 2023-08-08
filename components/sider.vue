@@ -2,6 +2,7 @@
     
     <div class="scroll-smooth font-medium translate-y-[-50%] mt-[200px] mr-[32px] mb-[0px] ml-[4vw] uppercase sticky top-[50%] min-w-[220px] max-w-[350px] float-left ">
         <h1 class="font-light">{{ page?.title }}</h1>
+        <ContentNavigation v-slot="{ navigation }">
         <ul class="font-extralight">
             
             <li v-for="e in toc?.links" >
@@ -17,7 +18,7 @@
                 </ul>
             </li>
         </ul>
-
+</ContentNavigation>
     </div>
 </template>
 
