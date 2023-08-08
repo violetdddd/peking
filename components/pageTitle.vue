@@ -1,6 +1,6 @@
 <template>
     <div class=" w-[100vw] h-[20vh] bg-transparent">
-        {{ page.title }}
+        {{ page?.title }}
     </div>
 </template>
 
