@@ -1,5 +1,5 @@
 <template>
-    <div class=" w-[100vw] h-[20vh] bg-transparent">
+    <div class="h-[20vh] bg-transparent">
         {{ page?.title }}
     </div>
 </template>
