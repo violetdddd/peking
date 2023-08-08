@@ -33,10 +33,10 @@
         <div class="uppercase pl-5">
           <ul id="subList" :class="{'hidden':!mainListActive[0]}">
             <li @click="hideBack">
-              <h1><NuxtLink to="/about">description</NuxtLink></h1>
+              <h1><NuxtLink to="/description">description</NuxtLink></h1>
             </li>
             <li  @click="hideBack">
-              <h1>implementation</h1>
+              <h1><NuxtLink to="/about">implementation</NuxtLink></h1>
             </li>
             <li @click="hideBack">
               <h1>contribution</h1>
