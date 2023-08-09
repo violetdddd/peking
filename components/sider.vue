@@ -31,16 +31,18 @@ onMounted(()=>{
   
 let links = gsap.utils.toArray("div#myDiv ul li a");
 let lis = gsap.utils.toArray("div#myDiv ul li")
+lis[0].classList.add("active");
+links[0].classList.add("active");
 links.forEach(a => {
   let element = document.querySelector(a.getAttribute("href")),
       linkST = ScrollTrigger.create({
             trigger: element,
-            start: "top 19vh"
+            start: "top 100"
           });
   ScrollTrigger.create({
     trigger: element,
-    start: "top 20vh",
-    end: "bottom 19vh",
+    start: "top 101",
+    end: "bottom 100",
     onToggle: self => self.isActive && setActive(a,a.parentNode.parentNode)
   });
   a.addEventListener("click", e => {

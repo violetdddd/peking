@@ -25,7 +25,7 @@
 </template>
 
 <script setup lang="ts">
-
+import 'katex/dist/katex.min.css'
 </script>
 
 <style scoped>

@@ -6,6 +6,14 @@ export default defineNuxtConfig({
     navigation: {
       fields: ["cover"],
     },
+    markdown: {
+      remarkPlugins: [
+        'remark-math'
+      ],
+      rehypePlugins: [
+        'rehype-katex'
+      ]
+    },
   },
   app: {
     baseURL: "/A-website-script/",
