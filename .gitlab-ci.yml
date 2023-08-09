@@ -1,12 +1,25 @@
-image: python:3.6
+default:
+  image: node:latest
+  before_script:
+    - corepack enable
+    - corepack prepare pnpm@latest-8 --activate
+    - pnpm config set store-dir .pnpm-store
+  cache:
+    key:
+      files:
+        - pnpm-lock.yaml
+    paths:
+      - .pnpm-store
 
 pages:
-  stage: build
+  stage: deploy
   script:
-  - pip install --no-cache-dir -r dependencies.txt
-  - FLASK_APP=app.py flask freeze
+    - pnpm install
+    - pnpm generate
+    - rm -rf public
+    - mv .output/public public
   artifacts:
     paths:
-    - public
+      - public
   only:
-  - main
+    - main

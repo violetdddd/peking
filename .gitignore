@@ -1,6 +1,8 @@
-env
-venv
-.vscode
-__pycache__
-public
-.DS_Store
+node_modules
+*.log*
+.nuxt
+.nitro
+.cache
+.output
+.env
+dist
