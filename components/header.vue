@@ -39,7 +39,7 @@
               <h1><NuxtLink to="/about">implementation</NuxtLink></h1>
             </li>
             <li @click="hideBack">
-              <h1>contribution</h1>
+              <h1><NuxtLink to="/team">contribution</NuxtLink></h1>
             </li>
           </ul>
           <ul id="subList" :class="{'hidden':!mainListActive[1]}">
