@@ -1,10 +1,9 @@
 <template>
     <footer class="relative z-[49] bottom-0 bg-white dark:bg-gray-900 border-t-red-500 border-t-[25px]">
         <div class="mx-auto w-full max-w-screen-xl">
-            <div class="flex items-center justify-evenly ">
+            <div class="flex items-center justify-evenly mt-2">
                 <div class="flex items-center justify-center h-[9vw] w-[9vw] border-r-black border-r-[1px] pr-[30px]">
-                    <img
-                        src="https://static.igem.wiki/teams/4713/wiki/igem.png" alt="Peking Logo" />
+                    <img src="https://static.igem.wiki/teams/4713/wiki/igem.png" alt="Peking Logo" />
                 </div>
                 <div class="grid grid-rows-1 grid-cols-3 gap-5">
                     <div>
@@ -14,10 +13,9 @@
                         <img class="h-[5vw]" src="https://static.igem.wiki/teams/4713/wiki/foot2.png" alt="Center for Quantitative Biology, Peking University">
                     </div>
                     <div>
-                    <img class="h-[5vw]" src="https://static.igem.wiki/teams/4713/wiki/snapgene-logo.png">
-                </div>
-                </div>
-                
+                        <img class="h-[5vw]" src="https://static.igem.wiki/teams/4713/wiki/snapgene-logo.png" alt="SnapGene">
+                    </div>
+                </div>  
             </div>
             <hr class="my-2 border-gray-200 sm:mx-auto dark:border-gray-700 lg:mb-4" />
             <div class=" grid grid-cols-2 gap-8 px-2 py-4 lg:py-6 md:grid-cols-5">
@@ -45,7 +43,6 @@
                         href="https://gitlab.igem.org/2023/peking">gitlab.igem.org/2023/peking</a>.
                 </span>
             </div>
-
         </div>
     </footer>
 </template>

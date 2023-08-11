@@ -88,7 +88,7 @@
             <li @click="hideBack">
               <h1 >members</h1>
             </li>
-            <li  >
+            <li @click="hideBack">
               <h1>collaborations</h1>
             </li>
             <li @click="hideBack">
@@ -97,15 +97,11 @@
           </ul>
         </div>
       </div>
-
     </div>
-
-
   </div>
 
   <!-- nav bar -->
-  <nav
-    class=" bg-transparent dark:bg-gray-800 dark:border-gray-700 sticky z-50 top-0 left-0 right-0">
+  <nav class=" bg-transparent dark:bg-gray-800 dark:border-gray-700 sticky z-50 top-0 left-0 right-0">
     <div @click.self="hideBack" class=" flex items-center justify-between flex-wrap p-4">
       <NuxtLink to="/" class="flex items-center">
         <img src="https://static.igem.wiki/teams/4713/wiki/igem.png" class="h-8 mr-3" alt="Peking Logo" />
@@ -120,9 +116,7 @@
           </div>
           <div id="botBar" class="h-[4px] bg-white w-[30px] rounded-[5px] transition duration-500"></div>
         </div>
-
       </div>
-
     </div>
   </nav>
 </template>
