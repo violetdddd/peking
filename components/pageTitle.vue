@@ -1,6 +1,6 @@
 <template>
-    <div class="h-[20vh] bg-transparent">
-        {{ page?.title }}
+    <div class="h-[15vh] bg-transparent">
+        <p class=" text-center text-5xl pt-5">{{ page?.title }}</p>
     </div>
 </template>
 
