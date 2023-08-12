@@ -8,7 +8,7 @@
         class="transition ease-in-out delay-150 duration-1000 hover:scale-125 hover:z-[70] w-[calc(min(50vh,50vw))] h-[calc(min(50vh,50vw))] scale-110 rounded-full flex items-center justify-center bg-pink-500 shadow-lg ring-2 ring-white z-[50] dark:ring-slate-900">
         <div class=" uppercase pl-1 lg:pl-5">
           <ul id="mainList" class="">
-            <li v-for="(item,index) in bigTitle" @mouseover="addActive(index)" :class="{'active':mainListActive[index]}">
+            <li class="lg:p-[10px]" v-for="(item,index) in bigTitle" @mouseover="addActive(index)" :class="{'active':mainListActive[index]}">
               <h1 class="text-base lg:text-3xl" v-if="index!==3">{{ item }}</h1>
               <h1 class="text-base lg:text-3xl" v-else>human
                 <br>
@@ -38,7 +38,7 @@
         class="transition ease-in-out delay-150 duration-1000 hover:scale-110 hover:z-[70] w-[calc(min(50vh,50vw))] h-[calc(min(50vh,50vw))] rounded-full flex items-center justify-center bg-pink-500 shadow-lg ring-2 ring-white z-[60] dark:ring-slate-900">
         <div class="uppercase pl-1 lg:pl-5">
           <ul id="subList" :class="{'hidden':!mainListActive[index]}" v-for="(item, index) in bigTitle">
-            <li @click="hideBack" v-for="(ite, ind) in subTitle[index]">
+            <li class="lg:p-[10px]" @click="hideBack" v-for="(ite, ind) in subTitle[index]">
               <h1 class="text-base lg:text-3xl" v-if="index===0 && ind===0">
                 <NuxtLink to="/description">{{subTitle[0][0]}}</NuxtLink>
               </h1>
@@ -241,7 +241,6 @@ ul#subList {
 #subList li{
   cursor: pointer;
   width: fit-content;
-  padding: 10px
 }
 #mainList li h1{
   width:fit-content;
@@ -249,8 +248,5 @@ ul#subList {
   box-shadow: inset 0 0em 0 0 #db2777;
 }
 
-#mainList li{
-  padding: 10px;
-}
 
 </style>
