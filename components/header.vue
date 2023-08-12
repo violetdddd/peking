@@ -3,12 +3,18 @@
     :class="{ 'bg-black/[0.85]': inSide, 'z-50': zIndex, 'bg-transparent': !inSide,'-z-10 hidden':!zIndex }"
     class="flex items-center justify-center flex-col transition fixed w-[100vw] h-[100vh]">
     <div :class="{ 'transition-opacity ease-in-out duration-300 opacity-0 -z-10': !inSide, 'animate-fade': inSide }"
-      class=" flex justify-center -space-x-10 text-white text-3xl font-bold">
+      class=" flex justify-center -space-x-10 text-white text-base lg:text-3xl font-bold">
       <div
         class="transition ease-in-out delay-150 duration-1000 hover:scale-125 hover:z-[70] w-[calc(min(50vh,50vw))] h-[calc(min(50vh,50vw))] scale-110 rounded-full flex items-center justify-center bg-pink-500 shadow-lg ring-2 ring-white z-[50] dark:ring-slate-900">
-        <div class=" uppercase pl-5">
+        <div class=" uppercase pl-1 lg:pl-5">
           <ul id="mainList" class="">
-            <li  @mouseover="addActive(0)" :class="{'active':mainListActive[0]}">
+            <li v-for="(item,index) in bigTitle" @mouseover="addActive(index)" :class="{'active':mainListActive[index]}">
+              <h1 class="text-base lg:text-3xl" v-if="index!==3">{{ item }}</h1>
+              <h1 class="text-base lg:text-3xl" v-else>human
+                <br>
+                practices</h1>
+            </li>
+            <!-- <li  @mouseover="addActive(0)" :class="{'active':mainListActive[0]}">
               <h1>project</h1>
             </li>
             <li  @mouseover="addActive(1)" :class="{'active':mainListActive[1]}">
@@ -24,14 +30,28 @@
             </li>
             <li @mouseover="addActive(4)" :class="{'active':mainListActive[4]}">
               <h1>team</h1>
-            </li>
+            </li> -->
           </ul>
         </div>
       </div>
       <div
         class="transition ease-in-out delay-150 duration-1000 hover:scale-110 hover:z-[70] w-[calc(min(50vh,50vw))] h-[calc(min(50vh,50vw))] rounded-full flex items-center justify-center bg-pink-500 shadow-lg ring-2 ring-white z-[60] dark:ring-slate-900">
-        <div class="uppercase pl-5">
-          <ul id="subList" :class="{'hidden':!mainListActive[0]}">
+        <div class="uppercase pl-1 lg:pl-5">
+          <ul id="subList" :class="{'hidden':!mainListActive[index]}" v-for="(item, index) in bigTitle">
+            <li @click="hideBack" v-for="(ite, ind) in subTitle[index]">
+              <h1 class="text-base lg:text-3xl" v-if="index===0 && ind===0">
+                <NuxtLink to="/description">{{subTitle[0][0]}}</NuxtLink>
+              </h1>
+              <h1 class="text-base lg:text-3xl" v-else-if="index===0 && ind===1">
+                <NuxtLink to="/about">{{ subTitle[0][1]}}</NuxtLink>
+              </h1>
+              <h1 class="text-base lg:text-3xl" v-else-if="index===0 && ind===2">
+                <NuxtLink to="/team">{{ subTitle[0][2] }}</NuxtLink>
+              </h1>
+              <h1 v-else class="text-base lg:text-3xl">{{ ite }}</h1>
+            </li>
+          </ul>
+          <!-- <ul id="subList" :class="{'hidden':!mainListActive[0]}">
             <li @click="hideBack">
               <h1><NuxtLink to="/description">description</NuxtLink></h1>
             </li>
@@ -94,7 +114,7 @@
             <li @click="hideBack">
               <h1>attributions</h1>
             </li>
-          </ul>
+          </ul> -->
         </div>
       </div>
     </div>
@@ -135,6 +155,11 @@ const zIndex = ref(false);
 const inSide = ref(false);
 
 const mainListActive = ref([true,false,false,false,false]);
+
+const bigTitle = ref(["PROJECT", "WET LAB", "DRY LAB", "HUMAN PRACTICE", "TEAM"]);
+const subTitle = ref([["DESCRIPTION", "IMPLEMENTATION", "CONTRIBUTION"], ["ENGINEERING", "RESULTS", "PARTS", "EXPERIMENTS", "SAFETY"],
+["MODEL", "SOFTWARE", "HARDWARE", "MEASUREMENT"], ["HUMAN PRACTICES", "EDUCATION & PUBLIC ENGAGEMENT"],
+["MEMBERS", "COLLABORATIONS", "ATTRIBUTIONS"]]);
 
 function toggleIn() {
   inSide.value = !inSide.value;
