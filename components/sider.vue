@@ -1,6 +1,6 @@
 <template>
     
-    <div id="myDiv" class="font-medium translate-y-[-50%] mt-[200px] mr-[32px] mb-[0px] ml-[4vw] uppercase sticky top-[50%] min-w-[220px] max-w-[350px] float-left ">
+    <div id="myDiv" class="font-medium translate-y-[-50%] scale-50 lg:scale-100 mt-[200px] mr-3 lg:mr-[32px] mb-[0px] ml-[4vw] uppercase sticky top-[50%] min-w-[220px] max-w-[350px] float-left ">
         <h1 class="font-light">{{ page?.title }}</h1>
 
         <ul class="font-extralight">
