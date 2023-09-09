@@ -2,7 +2,7 @@
     <footer class="relative z-[49] bottom-0 bg-white dark:bg-gray-900 border-t-red-500 border-t-[25px]">
         <div class="mx-auto w-full max-w-screen-xl">
             <div class="flex items-center justify-evenly mt-2">
-                <div class="flex items-center justify-center h-[9vw] w-[9vw] border-r-black border-r-[1px] pr-[30px]">
+                <div class="flex items-center justify-center h-[9vw] w-[9vw] border-r-[rgb(235,189,195)] border-r-[1px] pr-[30px]">
                     <img src="https://static.igem.wiki/teams/4713/wiki/igem.png" alt="Peking Logo" />
                 </div>
                 <div class="grid grid-rows-1 grid-cols-3 gap-5">

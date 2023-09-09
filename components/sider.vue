@@ -6,12 +6,12 @@
         <ul class="font-extralight">
             <li v-for="e in toc?.links">
                 <div class=" flex cursor-pointer items-center mt-6">
-                <div class="transition ease-out duration-500 mr-[8px] border-solid border max-w-[15px] max-h-[15px] h-[10vw] w-[10vh] rounded-full border-blue-500"></div>
+                <div class="transition ease-out duration-500 mr-[8px] border-solid border max-w-[15px] max-h-[15px] h-[10vw] w-[10vh] rounded-full border-red-900"></div>
                 <a class=" text-lg" :href="'#' + e.id">{{ e.text }}</a></div>
                 <ul>
                     <li v-for="c in e?.children">
                         <div class="flex cursor-pointer items-center mt-4">
-                        <div class="transition ease-out duration-500 ml-[16px] mr-[8px] border-solid border max-w-[15px] max-h-[15px] h-[8vw] w-[8vh] rounded-full border-blue-500"></div>
+                        <div class="transition ease-out duration-500 ml-[16px] mr-[8px] border-solid border max-w-[15px] max-h-[15px] h-[8vw] w-[8vh] rounded-full border-red-900"></div>
                         <a :href="'#' + c.id">{{ c.text }}</a></div>
                     </li>
                 </ul>
@@ -65,9 +65,9 @@ function setActive(link,li) {
 
 <style scoped>
 div#myDiv ul li a.active {
-    color: #3b82f6;
+    color: #8B0012;
   }
 div#myDiv ul li.active > div > div.border{
-    background-color: #3b82f6;
+    background-color: #8B0012;
 }
 </style>
