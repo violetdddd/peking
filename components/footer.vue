@@ -5,12 +5,12 @@
                 <div class="flex items-center justify-center h-[9vw] w-[9vw] border-r-[rgb(235,189,195)] border-r-[1px] pr-[30px]">
                     <img src="https://static.igem.wiki/teams/4713/wiki/igem.png" alt="Peking Logo" />
                 </div>
-                <div class="grid grid-rows-1 grid-cols-3 gap-5">
-                    <div>
+                <div class="grid grid-rows-1 grid-cols-2 gap-10">
+                    <!-- <div>
                         <img class=" h-[5vw]" alt="School of Life Sciences, Peking University" src="https://static.igem.wiki/teams/4713/wiki/foot1.png">
-                    </div>
+                    </div> -->
                     <div>
-                        <img class="h-[5vw]" src="https://static.igem.wiki/teams/4713/wiki/foot2.png" alt="Center for Quantitative Biology, Peking University">
+                        <img class="h-[5vw]" src="https://static.igem.wiki/teams/4713/wiki/dingliang.png" alt="Center for Quantitative Biology, Peking University">
                     </div>
                     <div>
                         <img class="h-[5vw]" src="https://static.igem.wiki/teams/4713/wiki/snapgene-logo.png" alt="SnapGene">
