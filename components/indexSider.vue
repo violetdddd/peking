@@ -1,5 +1,5 @@
 <template>
-    <svg id="svg" :viewBox="viebox" class="fixed left-1/2 top-1/4 transition-opacity duration-20">
+    <svg id="svg" :viewBox="viebox" class="fixed top-1/4 transition-opacity duration-20">
         <g id="Layer_1">
             <!-- <path id="path"
                 d="m58.33331,47.33333c-16,60 101,48 -6,132c-107,84 30,146 29.66669,145.66667c0.33331,0.33332 74.33331,30.33332 14.33331,94.33332c-60,64 -4,117 -4.33331,116.66668"
